@@ -1,5 +1,4 @@
 <%= render 'shared/content_title', title: 'All posts' %>
-
 <% @posts.each do |post| %>
   <div class="row">
     <div class = "span8 well">
@@ -13,6 +12,12 @@
       <small>
         <span>
           <%= link_to("#{post.comments.size} comments", post_path(post)) %>
+        </span>
+      </small>
+      <br />
+      <small>
+        <span>
+          <%= link_to 'Edit Post', edit_post_path(post) %>
         </span>
       </small>
     </div>
